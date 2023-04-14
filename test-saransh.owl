@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY test-saransh "http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#"
+     xml:base="http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:test-saransh="http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="&test-saransh;studies">
+        <rdfs:range rdf:resource="&test-saransh;Module"/>
+        <rdfs:domain rdf:resource="&test-saransh;Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="&test-saransh;teaches">
+        <rdfs:domain rdf:resource="&test-saransh;Lecturer"/>
+        <rdfs:range rdf:resource="&test-saransh;Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#first_name -->
+
+    <owl:DatatypeProperty rdf:about="&test-saransh;first_name">
+        <rdfs:domain rdf:resource="&test-saransh;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#last_name -->
+
+    <owl:DatatypeProperty rdf:about="&test-saransh;last_name">
+        <rdfs:domain rdf:resource="&test-saransh;Person"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#staff_id -->
+
+    <owl:DatatypeProperty rdf:about="&test-saransh;staff_id">
+        <rdfs:domain rdf:resource="&test-saransh;Lecturer"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#student_id -->
+
+    <owl:DatatypeProperty rdf:about="&test-saransh;student_id">
+        <rdfs:domain rdf:resource="&test-saransh;Student"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#CS -->
+
+    <owl:Class rdf:about="&test-saransh;CS">
+        <rdfs:subClassOf rdf:resource="&test-saransh;Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Lecturer -->
+
+    <owl:Class rdf:about="&test-saransh;Lecturer">
+        <rdfs:subClassOf rdf:resource="&test-saransh;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Math -->
+
+    <owl:Class rdf:about="&test-saransh;Math">
+        <rdfs:subClassOf rdf:resource="&test-saransh;Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Module -->
+
+    <owl:Class rdf:about="&test-saransh;Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Person -->
+
+    <owl:Class rdf:about="&test-saransh;Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Student -->
+
+    <owl:Class rdf:about="&test-saransh;Student">
+        <rdfs:subClassOf rdf:resource="&test-saransh;Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#ECE_627 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;ECE_627">
+        <rdf:type rdf:resource="&test-saransh;CS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#ECE_710 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;ECE_710">
+        <rdf:type rdf:resource="&test-saransh;CS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#ENG_M_632 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;ENG_M_632">
+        <rdf:type rdf:resource="&test-saransh;Math"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;Lecturer1">
+        <rdf:type rdf:resource="&test-saransh;Lecturer"/>
+        <staff_id rdf:datatype="&xsd;integer">1</staff_id>
+        <first_name rdf:datatype="&xsd;string">Bob</first_name>
+        <last_name rdf:datatype="&xsd;string">Marek</last_name>
+        <teaches rdf:resource="&test-saransh;ECE_627"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;Lecturer2">
+        <rdf:type rdf:resource="&test-saransh;Lecturer"/>
+        <staff_id rdf:datatype="&xsd;integer">2</staff_id>
+        <first_name rdf:datatype="&xsd;string">Edward</first_name>
+        <last_name rdf:datatype="&xsd;string">Lou</last_name>
+        <teaches rdf:resource="&test-saransh;ECE_710"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Lecturer3 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;Lecturer3">
+        <rdf:type rdf:resource="&test-saransh;Lecturer"/>
+        <staff_id rdf:datatype="&xsd;integer">3</staff_id>
+        <last_name rdf:datatype="&xsd;string">Gallardio</last_name>
+        <first_name rdf:datatype="&xsd;string">Roberto</first_name>
+        <teaches rdf:resource="&test-saransh;ENG_M_632"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;Student1">
+        <rdf:type rdf:resource="&test-saransh;Student"/>
+        <student_id rdf:datatype="&xsd;integer">1754880</student_id>
+        <last_name rdf:datatype="&xsd;string">Mehta</last_name>
+        <first_name rdf:datatype="&xsd;string">Saransh</first_name>
+        <studies rdf:resource="&test-saransh;ECE_627"/>
+        <studies rdf:resource="&test-saransh;ECE_710"/>
+        <studies rdf:resource="&test-saransh;ENG_M_632"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/saran/ontologies/2023/3/test-saransh.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="&test-saransh;Student2">
+        <rdf:type rdf:resource="&test-saransh;Student"/>
+        <student_id rdf:datatype="&xsd;integer">1754881</student_id>
+        <first_name rdf:datatype="&xsd;string">Adhyayan</first_name>
+        <last_name rdf:datatype="&xsd;string">Bhatnagar</last_name>
+        <studies rdf:resource="&test-saransh;ECE_627"/>
+        <studies rdf:resource="&test-saransh;ECE_710"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&test-saransh;CS"/>
+            <rdf:Description rdf:about="&test-saransh;Lecturer"/>
+            <rdf:Description rdf:about="&test-saransh;Math"/>
+            <rdf:Description rdf:about="&test-saransh;Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
